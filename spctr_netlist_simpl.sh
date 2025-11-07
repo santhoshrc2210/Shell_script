@@ -63,7 +63,46 @@ cp file_randn2 file_randn4
 
 awk '{$19=substr($19,4); print}' file_randn4_1 | awk '$19="m=("$19' | awk '$6="f"$6' > file_randn4_3
 
+#part-2b : when source drain interchanged #use nested while loop
+line_number_ref=1
+line_number_chk=0
+total_line=$(cat file_rand2 | wc - l)
+#echo "$total_line"
+while read -r line_ref; do
+  #echo "$line ref"
+  drain_ref=$(echo Sline_ref | awk '{print $1)' )
+  gate_ref=$(echo Sline_ref | awk '{print $2}') 
+  source_ref=$(echo Sline_ref | awk '{print $3}' ) 
+  body_ref=$(echo Sline_ref | awk '{print $4}' ) 
+  dev_typ_ref=$(echo $line_ref | awk '{print $5}')
+  w_ref=$(echo $line _ref | awk '{print $6)' )
+  l_ ref=$(echo $line_ref | awk '{print $7}' ) 
+  nf_ref=$(echo $line_ref | awk '{print $8}' )
+  as_ref=$(echo $line_ref | awk '{print $9}' )
+  ad_ref=$(echo $line_ref | awk '{print $10}' )
+  ps_ref=$(echo $line_ref | awk '{print $11}' )
+  pd_ref=$(echo $line_ref | awk '{print $12}' )
+  nrd_ref=$(echo $line_ref | awk '{print $13}' )
+  nrs_ref=$(echo $line_ref | awk '{print $14}' ) 
+  sa_ref=$(echo $line_ref | awk '{print $15}' ) 
+  sb_ref=$(echo $line_ref | awk '(print $16}' )
+  sd_ref=$(echo $line_ref | awk 'fprint $17}' )
+  sca_ref=$(echo $line_ref | awk '{print $18)' ) 
+  scb_ref=$(echo $line_ref | awk '{print $19}' ) 
+  scc_ref=$(echo $line_ref | awk '{print $20}' )
+  DCN_ref=$(echo $line_ref | awk '{print $21}' )
+  DPS_ref=$(echo $line_ref | awk '{print $22}' )
+  DPCS_ref=$(echo $line_ref | awk '{print $23}')
+  DSTS_ref=$(echo $line_ref | awk '{print $24}' ) 
+  mr_ref=$(echo $line_ref | awk '{print $25}' ) 
+  mismod_ref=$(echo $line_ref | awk '{print $26}' ) 
+  globalmod_ref=$(echo $line_ref | awk '{print $27}' ) 
+  prelayout_ref=$(echo $line_ref | awk '{print $28}' )
+  LEMOD_ref=$(echo $line_ref | awk '{print $29}' )
 
+line number_chk=0
+while read -r line_chk; do
+  line_number_chk=$((line_number_chk+1))
 
 
 
