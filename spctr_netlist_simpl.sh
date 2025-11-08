@@ -212,9 +212,9 @@ cat file_rand4_3 > file_rand7
 cat file_rand4_3 >>file_rand7
 #add transistor name in format to first coloumn
 
-fet num=1
+fet_num=1
 total_fet_num=$(cat file_rand7 | wc -l)
-while | "Sfet_num" -le "Stotal_fet_num" ] 
+while | "$fet_num" -le "$total_fet_num" ] 
 do
   echo "XXX_Sfet_num" >>file_rand5
 ((fet_num=fet_num+1))
