@@ -3,6 +3,7 @@
 #input: spice netlist of schematic where all transistors have m=1(multipliers) and nf=1(fingers)
 #output: spice netlist of schematic with transistors that have same voltage on source and drain ( or source-drain and drain-source) combined to a single transistor with multipliers count updated
 #note: i am not an expert in shell script there maybe more effecient ways of solving this problem, i have broken down the problem into parts and have taken help from metaAI for these smaller parts
+#script working verified by LVS check
 
 file_name=$1
 echo $1
